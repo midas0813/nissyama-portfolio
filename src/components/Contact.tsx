@@ -2,11 +2,13 @@
 
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export function Contact() {
   const { t } = useLanguage();
   const [formData, setFormData] = useState({ name: '', email: '', company: '', message: '' });
   const [sent, setSent] = useState(false);
+  const ref = useScrollAnimation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,7 +21,7 @@ export function Contact() {
     'w-full px-4 py-3 rounded-lg border border-[var(--card-border)] bg-[var(--card-bg)] text-[var(--foreground)] placeholder:text-[var(--subtle)] focus:outline-none focus:ring-2 focus:ring-green-500 transition-all';
 
   return (
-    <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="contact" ref={ref} className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Japan map grey opacified background */}
       <div
         className="absolute inset-0 pointer-events-none select-none dark:opacity-50 opacity-20"
@@ -34,10 +36,10 @@ export function Contact() {
       />
 
       <div className="relative z-10 max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold text-primary mb-2">
+        <h2 data-scroll="fade-up" className="text-4xl font-bold text-primary mb-2">
           {t('Contact', 'お問い合わせ')}
         </h2>
-        <p className="text-muted mb-12 text-lg">
+        <p data-scroll="fade-up" data-delay="100" className="text-muted mb-12 text-lg">
           {t(
             'Available for full-time positions and consulting opportunities',
             '正社員・コンサルティングのご依頼を受け付けています'
@@ -46,7 +48,7 @@ export function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* ── Left: info ── */}
-          <div className="space-y-8">
+          <div data-scroll="fade-left" data-delay="200" className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold text-primary mb-4">
                 {t('Get In Touch', 'ご連絡ください')}
@@ -99,7 +101,7 @@ export function Contact() {
           </div>
 
           {/* ── Right: form ── */}
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <form data-scroll="fade-right" data-delay="300" onSubmit={handleSubmit} className="space-y-5">
             {sent && (
               <div className="p-4 rounded-lg bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 text-green-700 dark:text-green-300 text-sm font-medium">
                 {t("✅ Message sent! I'll respond within 24 hours.", '✅ メッセージを送信しました！24時間以内にご返信します。')}

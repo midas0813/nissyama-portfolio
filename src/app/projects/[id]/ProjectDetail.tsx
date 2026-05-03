@@ -72,9 +72,26 @@ export function ProjectDetail({ id }: { id: string }) {
           </div>
 
           {/* Hero image */}
-          <div className="relative h-[400px] sm:h-[500px] rounded-2xl overflow-hidden mb-12 shadow-2xl">
+          <div className="relative h-[400px] sm:h-[500px] rounded-2xl overflow-hidden mb-6 shadow-2xl">
             <Image src={project.image} alt={title} fill className="object-cover" priority sizes="(max-width: 1200px) 100vw, 1200px" />
           </div>
+
+          {/* Sub images */}
+          {project.subImages && project.subImages.length > 0 && (
+            <div className="grid grid-cols-2 gap-4 mb-12">
+              {project.subImages.map((img, i) => (
+                <div key={i} className="relative h-52 sm:h-64 rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src={img}
+                    alt={`${title} screenshot ${i + 1}`}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
 
           {/* Content grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">

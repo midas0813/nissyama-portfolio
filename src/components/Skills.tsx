@@ -1,8 +1,10 @@
 'use client';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export function Skills() {
   const { t } = useLanguage();
+  const ref = useScrollAnimation();
 
   const skillCategories = [
     {
@@ -113,12 +115,34 @@ export function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8">
+    <section id="skills" ref={ref} className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Crossing marquee */}
+      <div className="absolute top-6 left-0 right-0 pointer-events-none overflow-hidden flex flex-col gap-3 -rotate-3 opacity-10">
+        <div className="overflow-hidden">
+          <div className="marquee-track marquee-left">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span key={i} className="text-xl font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8">
+                HTML &nbsp;·&nbsp; CSS &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; React &nbsp;·&nbsp; Vue.js &nbsp;·&nbsp; Next.js &nbsp;·&nbsp; Tailwind &nbsp;·&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="overflow-hidden">
+          <div className="marquee-track marquee-right">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span key={i} className="text-xl font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8">
+                Node.js &nbsp;·&nbsp; Python &nbsp;·&nbsp; Go &nbsp;·&nbsp; AWS &nbsp;·&nbsp; GCP &nbsp;·&nbsp; GSAP &nbsp;·&nbsp; OpenAI &nbsp;·&nbsp; LangChain &nbsp;·&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-primary mb-4 animate-fade-in-up">
+        <h2 data-scroll="fade-up" className="text-3xl font-bold text-primary mb-4">
           {t('Technical Skills', '技術スキル')}
         </h2>
-        <p className="text-muted mb-12 animate-fade-in-up">
+        <p data-scroll="fade-up" data-delay="100" className="text-muted mb-12">
           {t(
             'Full stack expertise — from design and CMS to AI/LLM engineering',
             'デザイン・CMS構築からAI/LLMエンジニアリングまで、フルスタックの専門知識'
@@ -129,8 +153,9 @@ export function Skills() {
           {skillCategories.map((category, idx) => (
             <div
               key={category.title}
-              className="card border rounded-xl p-6 card-3d animate-fade-in-up"
-              style={{ animationDelay: `${idx * 80}ms` }}
+              data-scroll="zoom-in"
+              data-delay={String(idx * 80)}
+              className="card border rounded-xl p-6 card-3d"
             >
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-2xl">{category.icon}</span>

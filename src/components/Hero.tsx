@@ -58,7 +58,29 @@ export function Hero() {
         </div>
       </div>
 
-      {/* ── Corner decorations ── */}
+      {/* ── Crossing marquee sentences ── */}
+      <div className="absolute bottom-24 left-0 right-0 pointer-events-none overflow-hidden flex flex-col gap-3 -rotate-6 opacity-20">
+        {/* Row 1 — slides left */}
+        <div className="overflow-hidden">
+          <div className="marquee-track marquee-left">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span key={i} className="text-2xl font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8">
+                Full Stack Engineer &nbsp;·&nbsp; Web Design &nbsp;·&nbsp; AI Development &nbsp;·&nbsp; React &nbsp;·&nbsp; Next.js &nbsp;·&nbsp; Golang &nbsp;·&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+        {/* Row 2 — slides right */}
+        <div className="overflow-hidden">
+          <div className="marquee-track marquee-right">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span key={i} className="text-2xl font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8">
+                WordPress &nbsp;·&nbsp; Shopify &nbsp;·&nbsp; Webflow &nbsp;·&nbsp; LangChain &nbsp;·&nbsp; RAG &nbsp;·&nbsp; GSAP &nbsp;·&nbsp; Tokyo Japan &nbsp;·&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="absolute top-20 right-20 pointer-events-none hidden md:block">
         <svg viewBox="0 0 80 80" className="w-20 h-20 opacity-20 animate-spin-slow">
           <circle cx="40" cy="40" r="35" fill="none" stroke="#10b981" strokeWidth="1" strokeDasharray="8 4" />

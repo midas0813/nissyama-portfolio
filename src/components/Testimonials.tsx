@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { testimonials } from '@/data/testimonials';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -41,6 +42,7 @@ function Avatar({ src, name, size = 'lg' }: { src: string; name: string; size?: 
 export function Testimonials() {
   const { t, language } = useLanguage();
   const [active, setActive] = useState(0);
+  const ref = useScrollAnimation();
 
   const prev = () => setActive((a) => (a - 1 + testimonials.length) % testimonials.length);
   const next = () => setActive((a) => (a + 1) % testimonials.length);
@@ -48,17 +50,39 @@ export function Testimonials() {
   const current = testimonials[active];
 
   return (
-    <section id="testimonials" className="py-24 px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" ref={ref} className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Crossing marquee at bottom */}
+      <div className="absolute bottom-6 left-0 right-0 pointer-events-none overflow-hidden flex flex-col gap-3 rotate-3 opacity-10">
+        <div className="overflow-hidden">
+          <div className="marquee-track marquee-right">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span key={i} className="text-xl font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8">
+                5★ Review &nbsp;·&nbsp; Trusted by Clients &nbsp;·&nbsp; Tokyo Japan &nbsp;·&nbsp; Quality Work &nbsp;·&nbsp; On Time Delivery &nbsp;·&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="overflow-hidden">
+          <div className="marquee-track marquee-left">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span key={i} className="text-xl font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8">
+                WordPress &nbsp;·&nbsp; Shopify &nbsp;·&nbsp; Webflow &nbsp;·&nbsp; React &nbsp;·&nbsp; AI Development &nbsp;·&nbsp; Full Stack &nbsp;·&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-primary mb-4 animate-fade-in-up">
+        <h2 data-scroll="fade-up" className="text-3xl font-bold text-primary mb-4">
           {t('Client Testimonials', 'お客様の声')}
         </h2>
-        <p className="text-muted mb-14 animate-fade-in-up">
+        <p data-scroll="fade-up" data-delay="100" className="text-muted mb-14">
           {t('What clients say about working with me', 'クライアントからのフィードバック')}
         </p>
 
         {/* Featured testimonial */}
-        <div className="card border rounded-2xl p-8 sm:p-12 mb-8 relative overflow-hidden animate-fade-in-up">
+        <div data-scroll="fade-up" data-delay="200" className="card border rounded-2xl p-8 sm:p-12 mb-8 relative overflow-hidden">
           <div className="absolute top-4 right-8 text-green-500/10 text-[120px] font-serif leading-none select-none pointer-events-none">
             "
           </div>

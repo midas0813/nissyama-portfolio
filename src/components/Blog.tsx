@@ -1,8 +1,10 @@
 'use client';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export function Blog() {
   const { t } = useLanguage();
+  const ref = useScrollAnimation();
 
   const posts = [
     {
@@ -48,36 +50,33 @@ export function Blog() {
   ];
 
   return (
-    <section id="blog" className="section-alt py-24 px-4 sm:px-6 lg:px-8">
+    <section id="blog" ref={ref} className="section-alt py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-primary mb-4">
+        <h2 data-scroll="fade-up" className="text-4xl font-bold text-primary mb-4">
           {t('Engineering Insights', 'エンジニアリングの知見')}
         </h2>
-        <p className="text-muted mb-12 text-lg">
-          {t(
-            'Technical articles on system design and full-stack engineering',
-            'システム設計とフルスタックエンジニアリングに関する技術記事'
-          )}
+        <p data-scroll="fade-up" data-delay="100" className="text-muted mb-12 text-lg">
+          {t('Technical articles on system design and full-stack engineering', 'システム設計とフルスタックエンジニアリングに関する技術記事')}
         </p>
 
         <div className="grid md:grid-cols-2 gap-6">
           {posts.map((post, index) => (
-            <article key={index} className="card border rounded-xl p-6 card-3d group">
+            <article
+              key={index}
+              data-scroll="fade-up"
+              data-delay={String((index % 2) * 200)}
+              className="card border rounded-xl p-6 card-3d group"
+            >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-xs px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 rounded-full font-medium">
                   {post.category}
                 </span>
                 <span className="text-xs text-subtle">{post.readTime}</span>
               </div>
-
               <h3 className="text-xl font-semibold text-primary mb-3 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
                 {post.title}
               </h3>
-
-              <p className="text-muted text-sm mb-4 leading-relaxed">
-                {post.excerpt}
-              </p>
-
+              <p className="text-muted text-sm mb-4 leading-relaxed">{post.excerpt}</p>
               <div className="flex items-center justify-between">
                 <time className="text-xs text-subtle">
                   {new Date(post.date).toLocaleDateString(t('en-US', 'ja-JP'), {

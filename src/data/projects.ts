@@ -5,6 +5,7 @@ export interface Project {
   category: 'LP' | 'HP' | 'EC' | 'Medical' | 'AI' | 'Chatbot' | 'WordPress' | 'System' | 'SaaS' | 'Webflow' | 'Shopify';
   period: string;
   image: string;
+  subImages?: string[];
   description: string;
   descriptionJp: string;
   tech: string[];
@@ -29,6 +30,10 @@ export const projects: Project[] = [
     category: 'LP',
     period: '2024',
     image: '/projects/landing.jpg',
+    subImages: [
+      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=500&fit=crop&q=80',
+    ],
     description: 'High-converting LP for a Tokyo beauty salon with online booking and campaign promotions.',
     descriptionJp: '東京の美容サロン向け高コンバージョンLP。オンライン予約とキャンペーン訴求を実装。',
     tech: ['HTML', 'CSS', 'JavaScript', 'Figma'],
@@ -64,6 +69,7 @@ export const projects: Project[] = [
     challengeJp: '詳細なFigmaデザインを、予約を促進する高速でモバイル最適化されたLPに変換すること。',
     solution: 'Hand-coded with semantic HTML/CSS for maximum performance. Vanilla JS for interactions to avoid framework overhead.',
     solutionJp: 'パフォーマンス最大化のためセマンティックHTML/CSSで手書きコーディング。インタラクションはVanilla JSで実装しフレームワークのオーバーヘッドを排除。',
+    url: 'https://beauty-salon-lp.vercel.app',
   },
   {
     id: 'restaurant-hp-wordpress',
@@ -72,6 +78,10 @@ export const projects: Project[] = [
     category: 'WordPress',
     period: '2023 - 2024',
     image: '/projects/restaurant.jpg',
+    subImages: [
+      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=500&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=500&fit=crop&q=80',
+    ],
     description: 'Full corporate website for a Japanese restaurant chain built on WordPress with custom theme.',
     descriptionJp: 'カスタムテーマで構築した和食レストランチェーンのWordPressコーポレートサイト。',
     tech: ['WordPress', 'PHP', 'CSS', 'JavaScript', 'Figma'],
@@ -107,6 +117,7 @@ export const projects: Project[] = [
     challengeJp: 'デザイン品質を維持しながら、非技術者のスタッフが簡単に更新できるサイトを構築すること。',
     solution: 'Developed a custom WordPress theme with Gutenberg blocks tailored to the restaurant\'s content structure. Thorough CMS training provided.',
     solutionJp: 'レストランのコンテンツ構造に合わせたGutenbergブロックを持つカスタムWordPressテーマを開発。丁寧なCMS操作研修も実施。',
+    url: 'https://japanese-restaurant-wp.vercel.app',
   },
   {
     id: 'fashion-ec-shopify',
@@ -115,6 +126,10 @@ export const projects: Project[] = [
     category: 'Shopify',
     period: '2023',
     image: '/projects/ecommerce.jpg',
+    subImages: [
+      'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&h=500&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&h=500&fit=crop&q=80',
+    ],
     description: 'Shopify-based EC site for a Japanese fashion brand with custom theme and LINE Pay integration.',
     descriptionJp: 'カスタムテーマとLINE Pay連携を実装した日本ファッションブランドのShopify ECサイト。',
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'Figma'],
@@ -150,6 +165,7 @@ export const projects: Project[] = [
     challengeJp: '日本固有の決済手段を統合しながら、Shopify上でプレミアムブランド体験を実現すること。',
     solution: 'Built a fully custom Liquid theme matching the Figma spec. Used Shopify\'s payment API extensions for LINE Pay and PayPay.',
     solutionJp: 'Figma仕様に完全一致するカスタムLiquidテーマを構築。LINE PayとPayPayにはShopifyの決済API拡張を使用。',
+    url: 'https://fashion-brand-shopify.myshopify.com',
   },
   {
     id: 'clinic-hp-webflow',
@@ -157,7 +173,11 @@ export const projects: Project[] = [
     titleJp: '医療クリニック ホームページ',
     category: 'Medical',
     period: '2024',
-    image: '/projects/medical.jpg',
+    image: '/projects/medical/medical-fv.png',
+    subImages: [
+      '/projects/medical/medical-sub1.png',
+      '/projects/medical/medical-sub2.png',
+    ],
     description: 'Clean, trustworthy HP for a Tokyo dermatology clinic built with Webflow and online appointment booking.',
     descriptionJp: 'Webflowで構築した東京の皮膚科クリニック向け清潔感のあるHP。オンライン予約機能付き。',
     tech: ['Webflow', 'JavaScript', 'Figma', 'CSS'],
@@ -193,6 +213,7 @@ export const projects: Project[] = [
     challengeJp: '医療機関としての信頼感を伝えながら、クリニックスタッフが簡単に更新できるサイトを構築すること。',
     solution: 'Used Webflow\'s visual CMS so staff can update content without code. Designed with a clean, white-space-heavy aesthetic to convey professionalism.',
     solutionJp: 'スタッフがコードなしでコンテンツ更新できるようWebflowのビジュアルCMSを活用。プロフェッショナルさを伝えるクリーンで余白を活かしたデザインを採用。',
+    url: 'https://clinic-hp-webflow.webflow.io',
   },
   {
     id: 'startup-lp-nextjs',
@@ -201,6 +222,10 @@ export const projects: Project[] = [
     category: 'LP',
     period: '2024',
     image: '/projects/corporate.jpg',
+    subImages: [
+      'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop&q=80',
+    ],
     description: 'High-performance LP for a B2B SaaS startup targeting Japanese enterprises, built with Next.js.',
     descriptionJp: '日本企業向けB2B SaaSスタートアップのNext.js製高パフォーマンスLP。',
     tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Figma', 'Vercel'],
@@ -236,6 +261,7 @@ export const projects: Project[] = [
     challengeJp: 'モダンなSaaSブランドが求めるリッチなアニメーションを実現しながら、ほぼ完璧なパフォーマンススコアを達成すること。',
     solution: 'Used Next.js static generation with Vercel CDN. Animations built with CSS transforms only — no heavy JS libraries.',
     solutionJp: 'Vercel CDNとNext.js静的生成を活用。アニメーションは重いJSライブラリを使わずCSSトランスフォームのみで実装。',
+    url: 'https://saas-startup-lp.vercel.app',
   },
   {
     id: 'real-estate-hp',
@@ -244,6 +270,10 @@ export const projects: Project[] = [
     category: 'HP',
     period: '2023',
     image: '/projects/realestate.jpg',
+    subImages: [
+      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=500&fit=crop&q=80',
+    ],
     description: 'Corporate website for a Tokyo real estate agency with property search and inquiry system.',
     descriptionJp: '物件検索と問い合わせシステムを備えた東京の不動産会社コーポレートサイト。',
     tech: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'Google Maps API', 'AWS'],
@@ -279,6 +309,7 @@ export const projects: Project[] = [
     challengeJp: '物件データベースとマップ検索を統合しながら、高速で管理しやすいサイトを維持すること。',
     solution: 'Built custom WordPress post types for properties with ACF. Google Maps API for map search. AWS S3 for property image storage.',
     solutionJp: 'ACFを使ったカスタム投稿タイプで物件管理。マップ検索にGoogle Maps API、物件画像保存にAWS S3を活用。',
+    url: 'https://tokyo-realestate-hp.vercel.app',
   },
   {
     id: 'ai-chatbot-support',
@@ -287,6 +318,10 @@ export const projects: Project[] = [
     category: 'Chatbot',
     period: '2024',
     image: '/projects/chatbot.jpg',
+    subImages: [
+      'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&q=80',
+    ],
     description: 'Japanese-language AI chatbot for an e-commerce company reducing support ticket volume.',
     descriptionJp: 'ECサイトのサポートチケット削減を目的とした日本語対応AIチャットボット。',
     tech: ['Python', 'Node.js', 'React', 'OpenAI API', 'AWS', 'GCP'],
@@ -322,6 +357,7 @@ export const projects: Project[] = [
     challengeJp: 'ユーザーをイライラさせることなく、日本語の微妙なニュアンスを含む問い合わせを正確に処理するチャットボットを構築すること。',
     solution: 'Fine-tuned GPT-4 with company-specific FAQ data. Built confidence scoring to decide when to escalate to human agents.',
     solutionJp: '会社固有のFAQデータでGPT-4をファインチューニング。有人エスカレーションの判断に信頼スコアリングを実装。',
+    url: 'https://ai-chatbot-support.vercel.app',
   },
   {
     id: 'fitness-studio-swell',
@@ -330,6 +366,10 @@ export const projects: Project[] = [
     category: 'HP',
     period: '2023',
     image: '/projects/fitness.jpg',
+    subImages: [
+      'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=500&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=500&fit=crop&q=80',
+    ],
     description: 'Modern fitness studio website built with Swell CMS featuring class schedules and membership plans.',
     descriptionJp: 'Swell CMSで構築したフィットネススタジオサイト。レッスンスケジュールと会員プランを実装。',
     tech: ['Swell', 'JavaScript', 'CSS', 'Figma'],
@@ -365,6 +405,7 @@ export const projects: Project[] = [
     challengeJp: 'スタジオのエネルギーとコミュニティ感をウェブサイトで表現しながら、体験レッスン予約を促進すること。',
     solution: 'Used Swell\'s flexible content blocks for easy schedule management. Embedded Instagram feed to show real community activity.',
     solutionJp: 'Swellの柔軟なコンテンツブロックでスケジュール管理を容易に。実際のコミュニティ活動を見せるためInstagramフィードを埋め込み。',
+    url: 'https://fitness-studio-swell.vercel.app',
   },
   {
     id: 'accounting-firm-hp',
@@ -373,6 +414,10 @@ export const projects: Project[] = [
     category: 'HP',
     period: '2022 - 2023',
     image: '/projects/corporate.jpg',
+    subImages: [
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&h=500&fit=crop&q=80',
+    ],
     description: 'Professional corporate website for a Tokyo accounting firm with service pages and consultation booking.',
     descriptionJp: 'サービスページと相談予約機能を備えた東京の税理士事務所コーポレートサイト。',
     tech: ['WordPress', 'PHP', 'CSS', 'JavaScript', 'Figma', 'Adobe XD'],
@@ -408,6 +453,7 @@ export const projects: Project[] = [
     challengeJp: '相談リードを獲得しながら、専門サービス会社としての専門性と信頼性を伝えること。',
     solution: 'Designed with a conservative, trust-focused aesthetic using Adobe XD. WordPress with ACF for easy content management by office staff.',
     solutionJp: 'Adobe XDで保守的で信頼感重視のデザインを設計。事務所スタッフが簡単に管理できるようACF付きWordPressを採用。',
+    url: 'https://accounting-firm-hp.vercel.app',
   },
   {
     id: 'apparel-ec-webflow',
@@ -416,6 +462,10 @@ export const projects: Project[] = [
     category: 'EC',
     period: '2024',
     image: '/projects/ecommerce.jpg',
+    subImages: [
+      'https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=500&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&h=500&fit=crop&q=80',
+    ],
     description: 'Webflow-based EC site for a Japanese apparel brand with editorial-style product pages.',
     descriptionJp: 'エディトリアルスタイルの商品ページを持つ日本アパレルブランドのWebflow ECサイト。',
     tech: ['Webflow', 'JavaScript', 'CSS', 'Figma', 'Stripe'],
@@ -451,6 +501,7 @@ export const projects: Project[] = [
     challengeJp: 'ブランドのハイファッションアイデンティティに合ったプレミアムなエディトリアルショッピング体験をWebflowで実現すること。',
     solution: 'Leveraged Webflow\'s CMS and interactions for a magazine-like feel. Custom JavaScript for the shoppable lookbook feature.',
     solutionJp: 'WebflowのCMSとインタラクションを活用してマガジン風の体験を実現。ショッパブルルックブック機能はカスタムJavaScriptで実装。',
+    url: 'https://apparel-brand-webflow.webflow.io',
   },
   {
     id: 'event-lp-studio',
@@ -459,6 +510,10 @@ export const projects: Project[] = [
     category: 'LP',
     period: '2024',
     image: '/projects/landing.jpg',
+    subImages: [
+      'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&h=500&fit=crop&q=80',
+    ],
     description: 'Event LP for a major Japanese tech conference built with Studio, featuring countdown and registration.',
     descriptionJp: 'Studioで構築した大手テックカンファレンスのイベントLP。カウントダウンと参加登録機能付き。',
     tech: ['Studio', 'JavaScript', 'Figma'],
@@ -494,6 +549,7 @@ export const projects: Project[] = [
     challengeJp: '厳しいローンチ期限に間に合わせながら、Studioを使って視覚的に印象的なイベントページを迅速に納品すること。',
     solution: 'Used Studio\'s no-code builder for rapid development. Custom JS injected for the countdown timer and registration form validation.',
     solutionJp: 'Studioのノーコードビルダーで迅速に開発。カウントダウンタイマーと登録フォームバリデーションはカスタムJSを注入して実装。',
+    url: 'https://tech-conference-lp.studio.site',
   },
   {
     id: 'nextjs-saas-dashboard',
@@ -502,6 +558,10 @@ export const projects: Project[] = [
     category: 'SaaS',
     period: '2023 - 2024',
     image: '/projects/social.jpg',
+    subImages: [
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=500&fit=crop&q=80',
+    ],
     description: 'SaaS analytics dashboard for Japanese SMEs built with Next.js, Node.js and GCP.',
     descriptionJp: 'Next.js、Node.js、GCPで構築した日本の中小企業向けSaaS分析ダッシュボード。',
     tech: ['Next.js', 'React', 'Node.js', 'Python', 'GCP', 'PostgreSQL'],
@@ -537,5 +597,6 @@ export const projects: Project[] = [
     challengeJp: '非技術者の中小企業オーナーがトレーニングなしで使えるデータ可視化ツールを構築すること。',
     solution: 'Focused on UX simplicity with progressive disclosure. Python data pipeline on GCP for processing. Next.js for fast, SEO-friendly frontend.',
     solutionJp: 'プログレッシブディスクロージャーによるUXのシンプルさを重視。GCP上のPythonデータパイプラインで処理。フロントエンドはNext.jsで高速かつSEOフレンドリーに。',
+    url: 'https://biz-analytics-dashboard.vercel.app',
   },
 ];

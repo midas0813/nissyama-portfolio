@@ -1,8 +1,10 @@
 'use client';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export function About() {
   const { t } = useLanguage();
+  const ref = useScrollAnimation();
 
   const philosophy = [
     {
@@ -28,24 +30,22 @@ export function About() {
   ];
 
   const stats = [
-    { value: '5+',   label: t('Years Experience', '年の経験'),    color: 'text-green-600' },
+    { value: '5+',   label: t('Years Experience', '年の経験'),         color: 'text-green-600' },
     { value: '30+',  label: t('Projects Delivered', 'プロジェクト完了'), color: 'text-emerald-600' },
-    { value: '15+',  label: t('Technologies', '使用技術'),        color: 'text-teal-600' },
-    { value: '100%', label: t('Client Satisfaction', '顧客満足度'), color: 'text-green-600' },
+    { value: '15+',  label: t('Technologies', '使用技術'),              color: 'text-teal-600' },
+    { value: '100%', label: t('Client Satisfaction', '顧客満足度'),     color: 'text-green-600' },
   ];
 
   return (
-    <section id="about" className="section-alt py-24 px-4 sm:px-6 lg:px-8">
+    <section id="about" ref={ref} className="section-alt py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 animate-fade-in-up text-primary">
+        <h2 data-scroll="fade-up" className="text-3xl font-bold mb-12 text-primary">
           {t('About Me', '私について')}
         </h2>
 
         <div className="space-y-8">
-          <div className="animate-fade-in-up">
-            <h3 className="text-xl font-semibold text-primary mb-4">
-              {t('Background', '経歴')}
-            </h3>
+          <div data-scroll="fade-left">
+            <h3 className="text-xl font-semibold text-primary mb-4">{t('Background', '経歴')}</h3>
             <p className="text-muted leading-relaxed mb-4">
               {t(
                 'Full Stack Software Engineer with 5+ years of experience building modern web applications from frontend to backend. Specialized in React, Next.js, Node.js, TypeScript, and Golang, with expertise in both client-side and server-side development.',
@@ -60,15 +60,10 @@ export function About() {
             </p>
           </div>
 
-          <div className="animate-fade-in-up">
-            <h3 className="text-xl font-semibold text-primary mb-4">
-              {t('Full Stack Philosophy', 'フルスタックの哲学')}
-            </h3>
+          <div data-scroll="fade-right" data-delay="200">
+            <h3 className="text-xl font-semibold text-primary mb-4">{t('Full Stack Philosophy', 'フルスタックの哲学')}</h3>
             <p className="text-muted leading-relaxed mb-4">
-              {t(
-                'I believe in building complete solutions that deliver value across the entire stack:',
-                'スタック全体にわたって価値を提供する完全なソリューションの構築を信条としています：'
-              )}
+              {t('I believe in building complete solutions that deliver value across the entire stack:', 'スタック全体にわたって価値を提供する完全なソリューションの構築を信条としています：')}
             </p>
             <ul className="space-y-3">
               {philosophy.map((item) => (
@@ -82,7 +77,7 @@ export function About() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-[var(--card-border)] animate-fade-in-up">
+          <div data-scroll="fade-up" data-delay="300" className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-[var(--card-border)]">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center hover:scale-110 transition-transform duration-300">
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
