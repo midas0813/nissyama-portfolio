@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/contexts/LanguageContext";
+import { Stars } from "@/components/Stars";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,12 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nakanishi Takashi | Senior Backend Engineer - Golang Specialist",
-  description: "Senior Fullstack Engineer specializing in scalable Golang backend systems, microservices architecture, and cloud infrastructure. Based in Tokyo, Japan.",
-  keywords: "Golang, Backend Engineer, Microservices, Cloud Architecture, Tokyo, Japan, Senior Engineer",
+  title: "Nakanishi Takashi | Full Stack Software Engineer",
+  description: "Full Stack Software Engineer specializing in modern web applications, scalable backend systems, and interactive user experiences. Expert in React, Next.js, Node.js, and Golang.",
+  keywords: "Full Stack Engineer, React, Next.js, Node.js, Golang, Web Development, Software Engineer, Tokyo, Japan",
   openGraph: {
-    title: "Nakanishi Takashi | Senior Backend Engineer",
-    description: "Senior Fullstack Engineer specializing in scalable Golang backend systems",
+    title: "Nakanishi Takashi | Full Stack Software Engineer",
+    description: "Full Stack Software Engineer building modern, scalable web applications",
     type: "website",
   },
 };
@@ -34,7 +36,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <LanguageProvider>
+          <div className="grid-background"></div>
+          <Stars />
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

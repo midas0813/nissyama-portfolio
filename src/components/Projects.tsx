@@ -1,195 +1,139 @@
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import { projects } from '@/data/projects';
+
 export function Projects() {
-  const projects = [
-    {
-      title: 'High-Performance E-Commerce Backend',
-      category: 'Microservices Architecture',
-      period: '2023 - 2024',
-      problem: 'Legacy monolithic system struggling with 100K+ daily users, frequent downtime during peak hours, and slow feature deployment cycles.',
-      solution: 'Redesigned as microservices architecture using Golang, implemented event-driven communication, and deployed on Kubernetes with auto-scaling.',
-      architecture: [
-        'API Gateway (Kong)',
-        'Order Service (Go + PostgreSQL)',
-        'Inventory Service (Go + Redis)',
-        'Payment Service (Go + Stripe API)',
-        'Notification Service (Go + RabbitMQ)',
-      ],
-      challenges: [
-        'Maintaining data consistency across services',
-        'Implementing distributed transactions',
-        'Zero-downtime migration from monolith',
-      ],
-      results: [
-        '99.99% uptime achieved',
-        '60% reduction in response time (avg 120ms)',
-        '10x improvement in deployment frequency',
-        'Handled 500K+ concurrent users during sales',
-      ],
-      tech: ['Golang', 'PostgreSQL', 'Redis', 'Kubernetes', 'RabbitMQ', 'Docker'],
-    },
-    {
-      title: 'Real-Time Analytics Pipeline',
-      category: 'Distributed Systems',
-      period: '2022 - 2023',
-      problem: 'Marketing team needed real-time insights from user behavior data, but batch processing caused 24-hour delays in reporting.',
-      solution: 'Built streaming data pipeline using Kafka and Golang consumers, with real-time aggregation and dashboard updates.',
-      architecture: [
-        'Event Producers (Go services)',
-        'Kafka Cluster (3 brokers)',
-        'Stream Processors (Go + Kafka Streams)',
-        'TimescaleDB (time-series data)',
-        'Grafana Dashboards',
-      ],
-      challenges: [
-        'Handling 50K+ events per second',
-        'Ensuring exactly-once processing',
-        'Managing backpressure during spikes',
-      ],
-      results: [
-        'Real-time data processing (<1s latency)',
-        'Processing 4.3B events per day',
-        '40% increase in marketing ROI',
-        'Reduced infrastructure costs by 30%',
-      ],
-      tech: ['Golang', 'Apache Kafka', 'TimescaleDB', 'Grafana', 'Prometheus'],
-    },
-    {
-      title: 'Financial Transaction System',
-      category: 'High-Reliability Backend',
-      period: '2021 - 2022',
-      problem: 'Payment processing system required bank-grade reliability, ACID compliance, and audit trails for regulatory compliance.',
-      solution: 'Implemented idempotent API design, distributed locking, and comprehensive audit logging with PostgreSQL.',
-      architecture: [
-        'Transaction API (Go + PostgreSQL)',
-        'Idempotency Layer (Redis)',
-        'Audit Service (Go + Elasticsearch)',
-        'Reconciliation Service (Go + Cron)',
-        'Monitoring (Prometheus + Grafana)',
-      ],
-      challenges: [
-        'Preventing duplicate transactions',
-        'Handling network failures gracefully',
-        'Meeting PCI-DSS compliance requirements',
-      ],
-      results: [
-        'Zero transaction loss in production',
-        '99.995% success rate',
-        'Processed $50M+ in transactions',
-        'Passed security audit on first attempt',
-      ],
-      tech: ['Golang', 'PostgreSQL', 'Redis', 'Elasticsearch', 'AWS'],
-    },
-  ];
+  const [visibleCount, setVisibleCount] = useState(6);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleLoadMore = () => {
+    setIsLoading(true);
+    // Simulate loading delay for better UX
+    setTimeout(() => {
+      setVisibleCount((prev) => Math.min(prev + 6, projects.length));
+      setIsLoading(false);
+    }, 500);
+  };
+
+  const visibleProjects = projects.slice(0, visibleCount);
+  const hasMore = visibleCount < projects.length;
 
   return (
     <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-          Project Case Studies
+        <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 animate-fade-in-up">
+          <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+            Featured Projects
+          </span>
         </h2>
-        <p className="text-slate-600 dark:text-slate-400 mb-12">
-          Detailed technical implementations and results
+        <p className="text-slate-600 dark:text-slate-400 mb-12 animate-fade-in-up animation-delay-100">
+          {projects.length}+ full-stack applications built with modern technologies
         </p>
         
-        <div className="space-y-12">
-          {projects.map((project, index) => (
-            <div key={index} className="bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg p-8">
-              <div className="mb-6">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {visibleProjects.map((project, index) => (
+            <Link
+              key={project.id}
+              href={`/projects/${project.id}`}
+              className="group bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 card-3d animate-fade-in-up"
+              style={{ animationDelay: `${index * 50}ms` }}
+            >
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300">
+                  {project.category}
+                </div>
+              </div>
+
+              <div className="p-6">
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
-                  <span className="text-sm text-slate-500 dark:text-slate-400 whitespace-nowrap ml-4">
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-3">
                     {project.period}
-                  </span>
-                </div>
-                <p className="text-sm text-slate-600 dark:text-slate-400">
-                  {project.category}
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-2 uppercase tracking-wide">
-                    Problem
-                  </h4>
-                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                    {project.problem}
+                  </p>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed line-clamp-2">
+                    {project.description}
                   </p>
                 </div>
 
-                <div>
-                  <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-2 uppercase tracking-wide">
-                    Solution
-                  </h4>
-                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                    {project.solution}
-                  </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.slice(0, 3).map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-1 text-xs bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                  {project.tech.length > 3 && (
+                    <span className="px-2 py-1 text-xs text-slate-500 dark:text-slate-400">
+                      +{project.tech.length - 3}
+                    </span>
+                  )}
                 </div>
 
-                <div>
-                  <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-3 uppercase tracking-wide">
-                    Architecture
-                  </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    {project.architecture.map((component, i) => (
-                      <div key={i} className="flex items-center text-sm text-slate-600 dark:text-slate-300">
-                        <svg className="w-4 h-4 mr-2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                        {component}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-3 uppercase tracking-wide">
-                    Technical Challenges
-                  </h4>
-                  <ul className="space-y-2">
-                    {project.challenges.map((challenge, i) => (
-                      <li key={i} className="flex items-start text-sm text-slate-600 dark:text-slate-300">
-                        <svg className="w-4 h-4 mr-2 mt-0.5 text-slate-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        {challenge}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-3 uppercase tracking-wide">
-                    Results & Impact
-                  </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {project.results.map((result, i) => (
-                      <div key={i} className="flex items-start text-sm">
-                        <svg className="w-5 h-5 mr-2 mt-0.5 text-green-600 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-slate-700 dark:text-slate-300">{result}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                <div className="flex items-center text-sm font-medium text-green-600 dark:text-green-400 group-hover:text-green-700 dark:group-hover:text-green-300 transition-colors">
+                  View Details
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
+
+        {/* Load More Button */}
+        {hasMore && (
+          <div className="mt-12 text-center">
+            <button
+              onClick={handleLoadMore}
+              disabled={isLoading}
+              className="group px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+            >
+              {isLoading ? (
+                <span className="flex items-center gap-3">
+                  <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Loading...
+                </span>
+              ) : (
+                <span className="flex items-center gap-2">
+                  View More Projects
+                  <span className="text-sm opacity-80">
+                    ({projects.length - visibleCount} remaining)
+                  </span>
+                  <svg className="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              )}
+            </button>
+          </div>
+        )}
+
+        {/* All Projects Loaded Message */}
+        {!hasMore && projects.length > 6 && (
+          <div className="mt-12 text-center">
+            <p className="text-slate-600 dark:text-slate-400 text-lg">
+              🎉 You've viewed all {projects.length} projects!
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
