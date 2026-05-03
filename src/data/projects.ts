@@ -29,7 +29,7 @@ export const projects: Project[] = [
     titleJp: '採用情報AI最適化プラットフォーム',
     category: 'AI',
     period: '2024',
-    image: '/projects/robot-payment/fv.png',
+    image: '/projects/robot-payment/FV.png',
     subImages: [
       '/projects/robot-payment/sub1.png',
       '/projects/robot-payment/sub2.png'
@@ -105,7 +105,7 @@ export const projects: Project[] = [
     titleJp: 'AIデジタルショウルーム「電気設備BOX」',
     category: 'AI',
     period: '2024',
-    image: '/projects/panasonic-showroom/fv.png',
+    image: '/projects/panasonic-showroom/FV.png',
     subImages: [
       '/projects/panasonic-showroom/sub1.png',
       '/projects/panasonic-showroom/sub2.png'
@@ -181,7 +181,7 @@ export const projects: Project[] = [
     titleJp: 'モバイルPASMO（Android版）',
     category: 'System',
     period: '2024',
-    image: '/projects/pasmo-android/fv.png',
+    image: '/projects/pasmo-android/FV.png',
     subImages: [
       '/projects/pasmo-android/sub1.png',
       '/projects/pasmo-android/sub2.png'
@@ -256,7 +256,7 @@ export const projects: Project[] = [
     titleJp: 'アルゴリズム取引プラットフォーム',
     category: 'AI',
     period: '2024',
-    image: '/projects/algo-trading/fv.png',
+    image: '/projects/algo-trading/FV.png',
     subImages: [
       '/projects/algo-trading/sub1.png',
       '/projects/algo-trading/sub2.png'
@@ -331,7 +331,7 @@ export const projects: Project[] = [
     titleJp: 'Y’sデンタルクリニックサイト',
     category: 'Medical',
     period: '2024',
-    image: '/projects/ys-dental/fv.png',
+    image: '/projects/ys-dental/FV.png',
     subImages: [
       '/projects/ys-dental/sub1.png',
       '/projects/ys-dental/sub2.png'
@@ -406,7 +406,7 @@ export const projects: Project[] = [
     titleJp: '佐藤歯科医院 コーポレートサイト',
     category: 'Medical',
     period: '2024',
-    image: '/projects/sato-dental/fv.png',
+    image: '/projects/sato-dental/FV.png',
     subImages: [
       '/projects/sato-dental/sub1.png',
       '/projects/sato-dental/sub2.png'
@@ -481,7 +481,7 @@ export const projects: Project[] = [
     titleJp: 'Upt コスメブランドECサイト',
     category: 'EC',
     period: '2024',
-    image: '/projects/upt-cosmetics/fv.png',
+    image: '/projects/upt-cosmetics/FV.png',
     subImages: [
       '/projects/upt-cosmetics/sub1.png',
       '/projects/upt-cosmetics/sub2.png'
@@ -555,7 +555,7 @@ export const projects: Project[] = [
     titleJp: 'WhatYa セールスチャットLP',
     category: 'LP',
     period: '2024',
-    image: '/projects/whatya-lp/fv.png',
+    image: '/projects/whatya-lp/FV.png',
     subImages: [
       '/projects/whatya-lp/sub1.png',
       '/projects/whatya-lp/sub2.png'
@@ -630,7 +630,7 @@ export const projects: Project[] = [
     titleJp: 'ユースキン ハナ ブランドLP',
     category: 'LP',
     period: '2024',
-    image: '/projects/yuskin-hana/fv.png',
+    image: '/projects/yuskin-hana/FV.png',
     subImages: [
       '/projects/yuskin-hana/sub1.png',
       '/projects/yuskin-hana/sub2.png'
@@ -705,7 +705,7 @@ export const projects: Project[] = [
     titleJp: '白十字 コーポレートサイト',
     category: 'HP',
     period: '2024',
-    image: '/projects/hakujuji/fv.png',
+    image: '/projects/hakujuji/FV.png',
     subImages: [
       '/projects/hakujuji/sub1.png',
       '/projects/hakujuji/sub2.png'
@@ -779,7 +779,7 @@ export const projects: Project[] = [
     titleJp: 'JMC 採用サイト',
     category: 'HP',
     period: '2024',
-    image: '/projects/jmc-recruit/fv.png',
+    image: '/projects/jmc-recruit/FV.png',
     subImages: [
       '/projects/jmc-recruit/sub1.png',
       '/projects/jmc-recruit/sub2.png'
@@ -853,7 +853,7 @@ export const projects: Project[] = [
     titleJp: 'Waris コーポレートサイト',
     category: 'HP',
     period: '2024',
-    image: '/projects/waris/fv.png',
+    image: '/projects/waris/FV.png',
     subImages: [
       '/projects/waris/sub1.png',
       '/projects/waris/sub2.png'
@@ -926,7 +926,7 @@ export const projects: Project[] = [
     titleJp: 'プロテインブランド「ザバス」｜株式会社 明治',
     category: 'HP',
     period: '2024',
-    image: '/projects/meiji-savas/fv.png',
+    image: '/projects/meiji-savas/FV.png',
     subImages: [
       '/projects/meiji-savas/sub1.png',
       '/projects/meiji-savas/sub2.png',
@@ -976,7 +976,7 @@ export const projects: Project[] = [
     titleJp: '医師採用トップ｜隈病院 医師採用サイト',
     category: 'Medical',
     period: '2024',
-    image: '/projects/kuma-hospital/fv.png',
+    image: '/projects/kuma-hospital/FV.png',
     subImages: [
       '/projects/kuma-hospital/sub1.png',
       '/projects/kuma-hospital/sub2.png',
@@ -1026,7 +1026,7 @@ export const projects: Project[] = [
     titleJp: 'みなとみらい総合法律事務所 コーポレートサイト',
     category: 'HP',
     period: '2024',
-    image: '/projects/mms-law/fv.png',
+    image: '/projects/mms-law/FV.png',
     subImages: [
       '/projects/mms-law/sub1.png',
       '/projects/mms-law/sub2.png',
@@ -1076,7 +1076,7 @@ export const projects: Project[] = [
     titleJp: 'Kore.ai エンタープライズAIプラットフォームサイト',
     category: 'AI',
     period: '2024',
-    image: '/projects/kore-ai/fv.png',
+    image: '/projects/kore-ai/FV.png',
     subImages: [
       '/projects/kore-ai/sub1.png',
       '/projects/kore-ai/sub2.png',
@@ -1126,7 +1126,7 @@ export const projects: Project[] = [
     titleJp: 'equals 洗顔石鹸 ブランドサイト',
     category: 'LP',
     period: '2024',
-    image: '/projects/equals-soap/fv.png',
+    image: '/projects/equals-soap/FV.png',
     subImages: [
       '/projects/equals-soap/sub1.png',
       '/projects/equals-soap/sub2.png',
