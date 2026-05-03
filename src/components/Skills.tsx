@@ -116,24 +116,31 @@ export function Skills() {
 
   return (
     <section id="skills" ref={ref} className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Crossing marquee */}
-      <div className="absolute top-6 left-0 right-0 pointer-events-none overflow-hidden flex flex-col gap-3 -rotate-3 opacity-10">
-        <div className="overflow-hidden">
-          <div className="marquee-track marquee-left">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <span key={i} className="text-xl font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8">
-                HTML &nbsp;·&nbsp; CSS &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; React &nbsp;·&nbsp; Vue.js &nbsp;·&nbsp; Next.js &nbsp;·&nbsp; Tailwind &nbsp;·&nbsp;
-              </span>
-            ))}
-          </div>
-        </div>
-        <div className="overflow-hidden">
-          <div className="marquee-track marquee-right">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <span key={i} className="text-xl font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8">
-                Node.js &nbsp;·&nbsp; Python &nbsp;·&nbsp; Go &nbsp;·&nbsp; AWS &nbsp;·&nbsp; GCP &nbsp;·&nbsp; GSAP &nbsp;·&nbsp; OpenAI &nbsp;·&nbsp; LangChain &nbsp;·&nbsp;
-              </span>
-            ))}
+      {/* Crossing marquee — +15deg, pivots from right edge */}
+      <div className="absolute inset-0 flex items-center pointer-events-none overflow-hidden">
+        <div
+          className="absolute left-0 right-0 overflow-hidden opacity-10"
+          style={{ transform: 'rotate(15deg)', transformOrigin: 'right center' }}
+        >
+          <div className="flex flex-col gap-4">
+            <div className="overflow-hidden">
+              <div className="marquee-track marquee-left">
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <span key={i} style={{ fontSize: '72px' }} className="font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8 whitespace-nowrap">
+                    HTML &nbsp;&middot;&nbsp; CSS &nbsp;&middot;&nbsp; JavaScript &nbsp;&middot;&nbsp; TypeScript &nbsp;&middot;&nbsp; React &nbsp;&middot;&nbsp; Vue.js &nbsp;&middot;&nbsp; Next.js &nbsp;&middot;&nbsp; Tailwind &nbsp;&middot;&nbsp;
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="overflow-hidden">
+              <div className="marquee-track marquee-right">
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <span key={i} style={{ fontSize: '72px' }} className="font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8 whitespace-nowrap">
+                    Node.js &nbsp;&middot;&nbsp; Python &nbsp;&middot;&nbsp; Go &nbsp;&middot;&nbsp; AWS &nbsp;&middot;&nbsp; GCP &nbsp;&middot;&nbsp; GSAP &nbsp;&middot;&nbsp; OpenAI &nbsp;&middot;&nbsp; LangChain &nbsp;&middot;&nbsp;
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

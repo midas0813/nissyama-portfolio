@@ -1,5 +1,7 @@
-'use client';
+﻿'use client';
 import { useLanguage } from '@/contexts/LanguageContext';
+
+const MARQUEE_STYLE = { fontSize: '72px' } as const;
 
 export function Hero() {
   const { t } = useLanguage();
@@ -7,14 +9,14 @@ export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 relative overflow-hidden">
 
-      {/* ── Background ambient blobs ── */}
+      {/* Background ambient blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-green-500/8 rounded-full blur-[120px] animate-float" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-emerald-500/8 rounded-full blur-[140px] animate-float" style={{ animationDelay: '3s' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-teal-500/5 rounded-full blur-[100px] animate-pulse-ring" />
       </div>
 
-      {/* ── Decorative shapes — left side ── */}
+      {/* Decorative shapes left */}
       <div className="absolute left-4 sm:left-12 top-1/2 -translate-y-1/2 pointer-events-none hidden lg:block">
         <div className="relative w-64 h-64">
           <div className="absolute inset-0 rounded-full border-2 border-dashed border-green-500/30 animate-spin-slow" />
@@ -37,7 +39,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* ── Decorative shapes — right side ── */}
+      {/* Decorative shapes right */}
       <div className="absolute right-4 sm:right-12 top-1/2 -translate-y-1/2 pointer-events-none hidden lg:block">
         <div className="relative w-56 h-56">
           <div className="absolute inset-0 rounded-full border-2 border-green-400/25 animate-spin-reverse" />
@@ -58,29 +60,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* ── Crossing marquee sentences ── */}
-      <div className="absolute bottom-24 left-0 right-0 pointer-events-none overflow-hidden flex flex-col gap-3 -rotate-6 opacity-20">
-        {/* Row 1 — slides left */}
-        <div className="overflow-hidden">
-          <div className="marquee-track marquee-left">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <span key={i} className="text-2xl font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8">
-                Full Stack Engineer &nbsp;·&nbsp; Web Design &nbsp;·&nbsp; AI Development &nbsp;·&nbsp; React &nbsp;·&nbsp; Next.js &nbsp;·&nbsp; Golang &nbsp;·&nbsp;
-              </span>
-            ))}
-          </div>
-        </div>
-        {/* Row 2 — slides right */}
-        <div className="overflow-hidden">
-          <div className="marquee-track marquee-right">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <span key={i} className="text-2xl font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8">
-                WordPress &nbsp;·&nbsp; Shopify &nbsp;·&nbsp; Webflow &nbsp;·&nbsp; LangChain &nbsp;·&nbsp; RAG &nbsp;·&nbsp; GSAP &nbsp;·&nbsp; Tokyo Japan &nbsp;·&nbsp;
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* Corner decorations */}
       <div className="absolute top-20 right-20 pointer-events-none hidden md:block">
         <svg viewBox="0 0 80 80" className="w-20 h-20 opacity-20 animate-spin-slow">
           <circle cx="40" cy="40" r="35" fill="none" stroke="#10b981" strokeWidth="1" strokeDasharray="8 4" />
@@ -95,7 +75,29 @@ export function Hero() {
         </svg>
       </div>
 
-      {/* ── Main content ── */}
+      {/* Crossing marquee — 72px, no rotation */}
+      <div className="absolute bottom-24 left-0 right-0 pointer-events-none overflow-hidden flex flex-col gap-4 opacity-20">
+        <div className="overflow-hidden">
+          <div className="marquee-track marquee-left">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span key={i} style={MARQUEE_STYLE} className="font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-10 whitespace-nowrap">
+                Full Stack Engineer &nbsp;&middot;&nbsp; Web Design &nbsp;&middot;&nbsp; AI Development &nbsp;&middot;&nbsp; React &nbsp;&middot;&nbsp; Next.js &nbsp;&middot;&nbsp; Golang &nbsp;&middot;&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="overflow-hidden">
+          <div className="marquee-track marquee-right">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span key={i} style={MARQUEE_STYLE} className="font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-10 whitespace-nowrap">
+                WordPress &nbsp;&middot;&nbsp; Shopify &nbsp;&middot;&nbsp; Webflow &nbsp;&middot;&nbsp; LangChain &nbsp;&middot;&nbsp; RAG &nbsp;&middot;&nbsp; GSAP &nbsp;&middot;&nbsp; Tokyo Japan &nbsp;&middot;&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Main content */}
       <div className="max-w-2xl mx-auto text-center relative z-10">
         <div className="mb-8 animate-fade-in-up relative inline-block">
           <div className="absolute inset-0 rounded-full border-2 border-green-500/30 scale-125 animate-pulse-ring" />

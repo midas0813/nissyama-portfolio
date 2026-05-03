@@ -51,13 +51,13 @@ export function Testimonials() {
 
   return (
     <section id="testimonials" ref={ref} className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Crossing marquee at bottom */}
-      <div className="absolute bottom-6 left-0 right-0 pointer-events-none overflow-hidden flex flex-col gap-3 rotate-3 opacity-10">
+      {/* Crossing marquee — centered vertically */}
+      <div className="absolute inset-0 flex flex-col justify-center gap-4 pointer-events-none overflow-hidden rotate-3 opacity-10">
         <div className="overflow-hidden">
           <div className="marquee-track marquee-right">
             {Array.from({ length: 6 }).map((_, i) => (
-              <span key={i} className="text-xl font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8">
-                5★ Review &nbsp;·&nbsp; Trusted by Clients &nbsp;·&nbsp; Tokyo Japan &nbsp;·&nbsp; Quality Work &nbsp;·&nbsp; On Time Delivery &nbsp;·&nbsp;
+              <span key={i} style={{ fontSize: '72px' }} className="font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8 whitespace-nowrap">
+                5&#9733; Review &nbsp;&middot;&nbsp; Trusted by Clients &nbsp;&middot;&nbsp; Tokyo Japan &nbsp;&middot;&nbsp; Quality Work &nbsp;&middot;&nbsp; On Time Delivery &nbsp;&middot;&nbsp;
               </span>
             ))}
           </div>
@@ -65,8 +65,8 @@ export function Testimonials() {
         <div className="overflow-hidden">
           <div className="marquee-track marquee-left">
             {Array.from({ length: 6 }).map((_, i) => (
-              <span key={i} className="text-xl font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8">
-                WordPress &nbsp;·&nbsp; Shopify &nbsp;·&nbsp; Webflow &nbsp;·&nbsp; React &nbsp;·&nbsp; AI Development &nbsp;·&nbsp; Full Stack &nbsp;·&nbsp;
+              <span key={i} style={{ fontSize: '72px' }} className="font-bold text-slate-400 dark:text-slate-500 tracking-widest uppercase mx-8 whitespace-nowrap">
+                WordPress &nbsp;&middot;&nbsp; Shopify &nbsp;&middot;&nbsp; Webflow &nbsp;&middot;&nbsp; React &nbsp;&middot;&nbsp; AI Development &nbsp;&middot;&nbsp; Full Stack &nbsp;&middot;&nbsp;
               </span>
             ))}
           </div>
