@@ -255,3 +255,22 @@ p { line-height: 1.75; }
 .japan-map-glow:hover {
   filter: drop-shadow(0 0 24px rgba(16, 185, 129, 0.9));
 }
+
+/* ── Crossing marquee sentences ── */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+}
+
+.marquee-left  { animation: marquee-left  28s linear infinite; }
+.marquee-right { animation: marquee-right 28s linear infinite; }

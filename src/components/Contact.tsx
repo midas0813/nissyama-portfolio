@@ -22,14 +22,14 @@ export function Contact() {
     <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Japan map grey opacified background */}
       <div
-        className="absolute inset-0 pointer-events-none select-none"
+        className="absolute inset-0 pointer-events-none select-none dark:opacity-50 opacity-20"
         style={{
-          backgroundImage: 'url(/japan-map.svg)',
+          backgroundImage: 'url(/map/jp.svg)',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center right -40px',
-          backgroundSize: '520px auto',
-          opacity: 0.06,
-          filter: 'grayscale(100%)',
+          backgroundPosition: 'calc(50% - 300px) calc(50% + 100px)',
+          backgroundSize: 'auto 100%',
+          
+          filter: 'grayscale(100%) brightness(0.5)',
         }}
       />
 
@@ -62,7 +62,7 @@ export function Contact() {
             <div className="space-y-4">
               {[
                 {
-                  label: 'nakanishi.takashi@example.com',
+                  label: 'nishiyama.naoki@example.com',
                   icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />,
                 },
                 {
@@ -92,7 +92,7 @@ export function Contact() {
                   </svg>
                 </div>
                 <a href="https://github.com" className="text-primary text-sm hover:text-green-600 dark:hover:text-green-400 transition-colors">
-                  github.com/nakanishi-takashi
+                  github.com/nishiyama-naoki
                 </a>
               </div>
             </div>
@@ -150,7 +150,7 @@ export function Contact() {
         </div>
 
         <footer className="mt-20 pt-8 border-t border-[var(--card-border)] text-center text-sm text-subtle">
-          <p>&copy; 2024 Nakanishi Takashi · 中西 貴志. {t('All rights reserved.', '無断転載禁止。')}</p>
+          <p>&copy; 2024 Nishiyama Naoki · 西山 直輝. {t('All rights reserved.', '無断転載禁止。')}</p>
         </footer>
       </div>
     </section>

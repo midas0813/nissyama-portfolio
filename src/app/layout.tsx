@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nakanishi Takashi | Full Stack Software Engineer",
+  title: "Nishiyama Naoki | Full Stack Software Engineer",
   description: "Full Stack Software Engineer specializing in modern web applications, scalable backend systems, and interactive user experiences. Expert in React, Next.js, Node.js, and Golang.",
   keywords: "Full Stack Engineer, React, Next.js, Node.js, Golang, Web Development, Software Engineer, Tokyo, Japan",
   openGraph: {
-    title: "Nakanishi Takashi | Full Stack Software Engineer",
+    title: "Nishiyama Naoki | Full Stack Software Engineer",
     description: "Full Stack Software Engineer building modern, scalable web applications",
     type: "website",
   },

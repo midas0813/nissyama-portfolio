@@ -88,14 +88,11 @@ export function Hero() {
         </p>
 
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-primary mb-3 tracking-tight animate-fade-in-up">
-          <span className="text-green-600 dark:text-green-400">Nakanishi</span>
-        </h1>
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-primary mb-4 tracking-tight animate-fade-in-up">
-          <span className="text-green-600 dark:text-green-400">Takashi</span>
+          <span className="text-green-600 dark:text-green-400">Nishiyama Naoki</span>
         </h1>
 
         <p className="text-2xl text-muted mb-8 animate-fade-in-up" style={{ fontFamily: 'serif' }}>
-          中西 貴志
+          西山 直輝
         </p>
 
         <p className="text-lg text-muted leading-relaxed mb-10 animate-fade-in-up max-w-xl mx-auto">
