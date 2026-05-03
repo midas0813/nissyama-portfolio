@@ -22,11 +22,7 @@ export function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <a href="/" className="text-xl font-bold text-green-600 dark:text-green-400">
-<<<<<<< HEAD
-            NsN
-=======
             N N
->>>>>>> d8f0a0cae668907b2c3e817e1504123e23a33380
           </a>
 
           {/* Desktop Navigation */}
