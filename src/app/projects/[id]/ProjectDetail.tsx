@@ -148,7 +148,7 @@ export function ProjectDetail({ id }: { id: string }) {
 
             {/* Sidebar */}
             <div className="space-y-6">
-              <div className="panel rounded-xl p-6 sticky top-24">
+              <div className="panel rounded-xl p-6 ">
                 <h3 className="text-lg font-bold text-primary mb-4">{t('Tech Stack', '使用技術')}</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (

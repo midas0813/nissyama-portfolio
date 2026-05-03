@@ -699,4 +699,475 @@ export const projects: Project[] = [
 
     url: 'https://yuskin.co.jp/hana/',
   },
+  {
+    id: 'hakujuji-corporate-site',
+    title: 'Confectionery Brand Corporate Website',
+    titleJp: '白十字 コーポレートサイト',
+    category: 'HP',
+    period: '2024',
+    image: '/projects/hakujuji/fv.png',
+    subImages: [
+      '/projects/hakujuji/sub1.png',
+      '/projects/hakujuji/sub2.png'
+    ],
+
+    description:
+      'A corporate website for a traditional Japanese confectionery brand, designed to communicate craftsmanship, product quality, and brand philosophy. The site blends storytelling, product presentation, and company information to create a cohesive digital experience that reflects the brand’s heritage and dedication to quality.',
+    descriptionJp:
+      '洋菓子・和菓子を展開する老舗ブランド「白十字」のコーポレートサイトを構築。素材へのこだわりや職人の手仕事を伝えるストーリー設計と商品訴求を融合し、ブランドの価値をデジタル上で表現しました。',
+
+    tech: [
+      'WordPress',
+      'PHP',
+      'JavaScript',
+      'CSS',
+      'Figma',
+      'UI/UX Design',
+      'HP Design'
+    ],
+
+    features: [
+      'Brand storytelling-focused content structure',
+      'Product showcase with high-quality visuals',
+      'Custom WordPress CMS for easy content updates',
+      'Responsive design for mobile and desktop',
+      'Company information and recruitment sections',
+      'SEO-friendly content architecture'
+    ],
+    featuresJp: [
+      'ブランドストーリー重視の構成',
+      '高品質ビジュアルによる商品訴求',
+      'WordPressによる更新しやすいCMS',
+      'レスポンシブ対応',
+      '会社情報・採用情報ページ',
+      'SEO最適化構造'
+    ],
+
+    results: [
+      'Enhanced brand perception and trust',
+      'Improved product visibility and engagement',
+      'Increased user session duration',
+      'Streamlined content management workflow'
+    ],
+    resultsJp: [
+      'ブランド信頼性の向上',
+      '商品閲覧率の向上',
+      '滞在時間の増加',
+      '更新作業の効率化'
+    ],
+
+    challenge:
+      'The brand needed to convey its craftsmanship and product quality in a digital format without losing its traditional identity. Additionally, balancing storytelling with product visibility and usability was essential.',
+    challengeJp:
+      '伝統的なブランド価値を損なわずに、職人のこだわりや商品品質をデジタルで表現する必要がありました。またストーリーと商品訴求のバランスを取ることが課題でした。',
+
+    solution:
+      'Designed a content structure that integrates storytelling with product presentation. Implemented a WordPress-based CMS to allow flexible updates while maintaining visual consistency and performance.',
+    solutionJp:
+      'ブランドストーリーと商品訴求を統合した構成を設計し、WordPressで柔軟な運用を実現しました。デザインの統一感とパフォーマンスを両立しました。',
+
+    architecture:
+      'WordPress CMS, PHP backend, optimized frontend with JavaScript and CSS, hosted on scalable infrastructure.',
+    architectureJp:
+      'WordPress CMS、PHPバックエンド、JS/CSSフロントエンド、クラウド環境で運用。',
+
+    url: 'https://www.hakujuji-g.co.jp/',
+  },
+  {
+    id: 'jmc-recruit-site',
+    title: 'Corporate Recruitment Website',
+    titleJp: 'JMC 採用サイト',
+    category: 'HP',
+    period: '2024',
+    image: '/projects/jmc-recruit/fv.png',
+    subImages: [
+      '/projects/jmc-recruit/sub1.png',
+      '/projects/jmc-recruit/sub2.png'
+    ],
+
+    description:
+      'A recruitment website designed to communicate the company’s culture, mission, and career opportunities. The platform focuses on delivering clear information while inspiring candidates through storytelling and structured content tailored to different roles and career paths.',
+    descriptionJp:
+      '企業のビジョンや文化を伝えながら、求職者に分かりやすく情報提供を行う採用サイトを構築。職種ごとの情報整理とストーリー設計により、応募意欲を高める導線を実現しました。',
+
+    tech: [
+      'WordPress',
+      'PHP',
+      'JavaScript',
+      'CSS',
+      'Figma',
+      'UI/UX Design',
+      'HP Design'
+    ],
+
+    features: [
+      'Structured job listings and role-based navigation',
+      'Employee stories and company culture content',
+      'CMS-driven content updates',
+      'Responsive and mobile-first design',
+      'Application flow optimization',
+      'SEO-optimized recruitment pages'
+    ],
+    featuresJp: [
+      '職種別の情報整理',
+      '社員インタビュー・企業文化コンテンツ',
+      'CMSによる更新機能',
+      'モバイル対応',
+      '応募導線最適化',
+      'SEO対応'
+    ],
+
+    results: [
+      'Increased job application rate',
+      'Improved candidate engagement',
+      'Better communication of company values',
+      'Reduced bounce rate'
+    ],
+    resultsJp: [
+      '応募数の増加',
+      '求職者エンゲージメント向上',
+      '企業理解の向上',
+      '直帰率改善'
+    ],
+
+    challenge:
+      'Recruitment sites must clearly communicate company culture and job roles while maintaining user engagement. It was necessary to present complex organizational information in a simple and appealing way.',
+    challengeJp:
+      '企業文化や仕事内容を分かりやすく伝えつつ、ユーザーの興味を引き続ける必要がありました。情報量が多くなりがちな点も課題でした。',
+
+    solution:
+      'Organized content into structured sections based on user intent and designed storytelling elements to engage candidates. Implemented a CMS for easy updates and continuous improvement.',
+    solutionJp:
+      'ユーザー視点で情報を整理し、ストーリーデザインを取り入れて理解しやすい構成にしました。WordPressを活用し継続的な改善が可能な環境を構築しました。',
+
+    architecture:
+      'WordPress CMS, PHP backend, responsive frontend with JavaScript and CSS, deployed on cloud hosting.',
+    architectureJp:
+      'WordPress CMS、PHPバックエンド、JS/CSSフロントエンド、クラウド環境。',
+
+    url: 'https://recruit.jmc-ltd.co.jp/',
+  },
+  {
+    id: 'waris-corporate-site',
+    title: 'Consulting Company Corporate Website',
+    titleJp: 'Waris コーポレートサイト',
+    category: 'HP',
+    period: '2024',
+    image: '/projects/waris/fv.png',
+    subImages: [
+      '/projects/waris/sub1.png',
+      '/projects/waris/sub2.png'
+    ],
+
+    description:
+      'A corporate website for a consulting company focused on empowering individuals and businesses. The site communicates services, company values, and success stories while providing a clear path for both individual professionals and corporate clients to engage with the platform.',
+    descriptionJp:
+      '個人と企業の双方を支援するコンサルティング企業のコーポレートサイトを構築。サービス内容や企業理念を分かりやすく伝え、ユーザーが目的に応じて行動できる導線を設計しました。',
+
+    tech: [
+      'Webflow',
+      'JavaScript',
+      'CSS',
+      'Figma',
+      'UI/UX Design',
+      'HP Design'
+    ],
+
+    features: [
+      'Service-oriented content structure',
+      'Dual audience targeting (individuals and companies)',
+      'Webflow CMS for flexible content management',
+      'Responsive and modern UI design',
+      'Clear call-to-action sections',
+      'Performance-optimized frontend'
+    ],
+    featuresJp: [
+      'サービス別コンテンツ設計',
+      '個人・法人双方への導線設計',
+      'Webflow CMSによる管理',
+      'モダンUIデザイン',
+      'CTA設計',
+      '高速表示最適化'
+    ],
+
+    results: [
+      'Improved user engagement and navigation clarity',
+      'Increased inquiries from both target audiences',
+      'Enhanced brand positioning',
+      'Higher conversion rates'
+    ],
+    resultsJp: [
+      'ユーザー導線の改善',
+      '問い合わせ増加',
+      'ブランドポジショニング強化',
+      'コンバージョン率向上'
+    ],
+
+    challenge:
+      'The platform needed to address both individuals and corporate clients with different needs. It was important to present services clearly without confusing users or diluting the message.',
+    challengeJp:
+      '個人と法人という異なるターゲットに対して分かりやすく情報を提供する必要がありました。情報が混在するとユーザー体験を損なう課題がありました。',
+
+    solution:
+      'Designed a clear content hierarchy separating user journeys while maintaining a unified brand message. Used Webflow CMS to ensure flexibility and fast iteration.',
+    solutionJp:
+      'ユーザータイプごとに導線を分けた情報設計を行い、ブランドメッセージを統一しました。Webflow CMSを活用し柔軟な運用を実現しました。',
+
+    architecture:
+      'Webflow CMS, JavaScript enhancements, optimized frontend performance, deployed via CDN.',
+    architectureJp:
+      'Webflow CMS、JavaScript、CDN配信による高速構成。',
+
+    url: 'https://waris.co.jp/',
+  },
+  {
+    id: 'meiji-savas-brand-site',
+    title: 'SAVAS Protein Brand Website | Meiji',
+    titleJp: 'プロテインブランド「ザバス」｜株式会社 明治',
+    category: 'HP',
+    period: '2024',
+    image: '/projects/meiji-savas/fv.png',
+    subImages: [
+      '/projects/meiji-savas/sub1.png',
+      '/projects/meiji-savas/sub2.png',
+    ],
+    description: 'Brand website for Meiji’s leading protein brand “SAVAS”, designed to showcase product variations, athlete endorsements, and nutritional education content. Built to support both marketing campaigns and long-term brand engagement.',
+    descriptionJp: '株式会社明治のプロテインブランド「ザバス」の公式ブランドサイト構築プロジェクト。商品ラインナップ、アスリートサポート情報、栄養コンテンツを統合し、ブランド訴求と継続的なユーザーエンゲージメントを実現するサイトを構築しました。',
+    tech: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue.js', 'Nuxt.js', 'WordPress', 'REST API', 'GSAP', 'AWS', 'Figma'],
+    features: [
+      'Dynamic product catalog with filtering and category segmentation',
+      'Athlete showcase and sponsorship storytelling sections',
+      'Nutritional education articles managed via CMS',
+      'Campaign and promotional landing modules',
+      'Interactive UI animations using GSAP',
+      'SEO-optimized structured content architecture',
+    ],
+    featuresJp: [
+      'カテゴリ別に整理された動的商品カタログ',
+      'アスリート紹介およびスポンサーコンテンツ',
+      'CMSによる栄養記事コンテンツ管理',
+      'キャンペーン用ランディングモジュール',
+      'GSAPによるインタラクティブアニメーション',
+      'SEOを意識した構造化コンテンツ設計',
+    ],
+    results: [
+      'Significant increase in organic traffic through SEO optimization',
+      'Improved user engagement with longer session durations',
+      'Higher conversion into product detail views',
+      'Enhanced brand perception through storytelling UX',
+    ],
+    resultsJp: [
+      'SEO最適化によりオーガニック流入が大幅増加',
+      'セッション滞在時間の向上',
+      '商品詳細ページ遷移率の向上',
+      'ブランドストーリー強化による認知向上',
+    ],
+    challenge: 'The project required balancing large-scale product information with brand storytelling in a single unified experience. Additionally, performance optimization was critical due to heavy visual content and nationwide traffic volume.',
+    challengeJp: '多数の商品情報とブランドストーリーを統合し、ユーザー体験を損なわない設計が求められました。また、大量のビジュアルコンテンツと高トラフィック環境に対応するパフォーマンス最適化も重要な課題でした。',
+    solution: 'Implemented a headless WordPress CMS with Nuxt.js frontend for scalability and performance. Optimized assets, lazy loading, and animation handling to maintain speed while delivering rich visuals.',
+    solutionJp: 'ヘッドレスWordPressとNuxt.jsを組み合わせた構成を採用し、スケーラビリティと高速表示を実現。画像最適化や遅延読み込みにより、リッチな表現とパフォーマンスを両立しました。',
+    architecture: 'Headless CMS (WordPress) + Nuxt.js frontend deployed on AWS with CDN, REST API integration for dynamic content delivery.',
+    architectureJp: 'WordPressをヘッドレスCMSとして利用し、Nuxt.jsフロントエンドとAWS CDN構成で高速配信。REST APIでコンテンツを動的取得。',
+    url: 'https://www.meiji.co.jp/',
+  },
+  {
+    id: 'kuma-hospital-recruit',
+    title: 'Kuma Hospital Doctor Recruitment Site',
+    titleJp: '医師採用トップ｜隈病院 医師採用サイト',
+    category: 'Medical',
+    period: '2024',
+    image: '/projects/kuma-hospital/fv.png',
+    subImages: [
+      '/projects/kuma-hospital/sub1.png',
+      '/projects/kuma-hospital/sub2.png',
+    ],
+    description: 'Medical recruitment website for Kuma Hospital, focusing on attracting specialized doctors through detailed career information, training programs, and institutional credibility.',
+    descriptionJp: '隈病院の医師採用サイト構築プロジェクト。専門医の採用を目的とし、診療実績や教育体制、キャリア情報を分かりやすく伝える設計を実現しました。',
+    tech: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'WordPress', 'REST API', 'Tailwind CSS', 'AWS', 'Figma'],
+    features: [
+      'Doctor recruitment information with structured career paths',
+      'Detailed training and education program pages',
+      'Interview and testimonial sections',
+      'CMS-managed content updates for HR teams',
+      'Responsive and accessibility-focused design',
+      'SEO optimization for medical recruitment keywords',
+    ],
+    featuresJp: [
+      'キャリアパスを整理した採用情報ページ',
+      '教育・研修プログラム詳細ページ',
+      '医師インタビュー・体験談掲載',
+      'CMSによる採用コンテンツ管理',
+      'アクセシビリティを考慮したレスポンシブ設計',
+      '医療採用向けSEO最適化',
+    ],
+    results: [
+      'Increase in qualified doctor applications',
+      'Improved engagement with recruitment content',
+      'Reduced bounce rate on recruitment pages',
+      'Enhanced institutional trust perception',
+    ],
+    resultsJp: [
+      '医師応募数の増加',
+      '採用コンテンツの閲覧率向上',
+      '直帰率の低下',
+      '医療機関としての信頼性向上',
+    ],
+    challenge: 'The key challenge was presenting highly specialized medical information in an accessible way. Additionally, the site needed to maintain trustworthiness while guiding users toward application actions.',
+    challengeJp: '専門性の高い医療情報を分かりやすく伝えることが課題でした。また、信頼性を保ちながら応募導線を設計する必要がありました。',
+    solution: 'Structured content by career stages and simplified navigation flow. Combined CMS flexibility with a clean UI to ensure both usability and credibility.',
+    solutionJp: 'キャリア段階ごとに情報を整理し、シンプルな導線設計を実施。CMSとUI設計を組み合わせ、使いやすさと信頼性を両立しました。',
+    architecture: 'Next.js frontend with WordPress CMS backend, deployed on AWS with optimized SEO structure.',
+    architectureJp: 'Next.jsフロントエンドとWordPress CMSを連携し、AWS環境でSEO最適化された構成を実現。',
+    url: 'https://www.kuma-h.or.jp/',
+  },
+  {
+    id: 'minatomirai-law-firm',
+    title: 'Minatomirai General Law Office Website',
+    titleJp: 'みなとみらい総合法律事務所 コーポレートサイト',
+    category: 'HP',
+    period: '2024',
+    image: '/projects/mms-law/fv.png',
+    subImages: [
+      '/projects/mms-law/sub1.png',
+      '/projects/mms-law/sub2.png',
+    ],
+    description: 'Corporate website for a Yokohama-based law firm specializing in inheritance, real estate, and corporate legal services. Designed to build trust and clearly communicate complex legal offerings to potential clients.',
+    descriptionJp: '横浜市の法律事務所「みなとみらい総合法律事務所」のコーポレートサイト構築プロジェクト。遺言・相続・不動産・企業法務などの専門分野を分かりやすく伝え、信頼性の高い情報発信を実現しました。',
+    tech: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'WordPress', 'REST API', 'Tailwind CSS', 'AWS', 'Figma'],
+    features: [
+      'Structured legal service pages for inheritance, real estate, and corporate law',
+      'Consultation flow with clear call-to-action design',
+      'Client-friendly explanations of complex legal topics',
+      'CMS-based content management for articles and updates',
+      'SEO optimization for local legal service keywords',
+      'Secure contact and consultation inquiry forms',
+    ],
+    featuresJp: [
+      '相続・不動産・企業法務のサービス詳細ページ',
+      '相談導線を最適化したCTA設計',
+      '専門的内容を分かりやすく解説するコンテンツ',
+      'CMSによる記事・お知らせ管理',
+      'ローカルSEOを意識した設計',
+      'セキュアなお問い合わせフォーム',
+    ],
+    results: [
+      'Increase in consultation inquiries from website',
+      'Improved trust and credibility through structured content',
+      'Higher search rankings for regional legal keywords',
+      'Reduced bounce rate on service pages',
+    ],
+    resultsJp: [
+      '問い合わせ件数の増加',
+      '構造化コンテンツによる信頼性向上',
+      '地域キーワードでの検索順位向上',
+      'サービスページの直帰率改善',
+    ],
+    challenge: 'The project required translating complex legal services into simple, understandable content for general users. Additionally, building trust through design and content structure was essential in a highly competitive legal market.',
+    challengeJp: '専門性の高い法律サービスを一般ユーザーにも理解しやすく伝える必要がありました。また、競争の激しい法律業界において、デザインと情報設計で信頼性を構築することが重要な課題でした。',
+    solution: 'Implemented a clean, minimal UI with structured content hierarchy. Combined CMS flexibility with SEO-focused page design to improve both usability and discoverability.',
+    solutionJp: 'シンプルで信頼感のあるUIと情報階層設計を採用。CMSとSEO設計を組み合わせ、使いやすさと検索性を両立しました。',
+    architecture: 'Next.js frontend with WordPress CMS backend, deployed on AWS with CDN and SEO optimization.',
+    architectureJp: 'Next.jsフロントエンドとWordPress CMSを連携し、AWS CDNで高速配信。SEO最適化された構成。',
+    url: 'https://mmslaw.jp/',
+  },
+  {
+    id: 'kore-ai-platform',
+    title: 'Enterprise AI Platform Website | Kore.ai',
+    titleJp: 'Kore.ai エンタープライズAIプラットフォームサイト',
+    category: 'AI',
+    period: '2024',
+    image: '/projects/kore-ai/fv.png',
+    subImages: [
+      '/projects/kore-ai/sub1.png',
+      '/projects/kore-ai/sub2.png',
+    ],
+    description: 'Enterprise AI platform website showcasing agentic AI applications, automation capabilities, and enterprise-grade solutions for business transformation.',
+    descriptionJp: 'エンタープライズ向けAIプラットフォーム「Kore.ai」のサービスサイト構築プロジェクト。Agentic AIアプリケーションや業務自動化機能を分かりやすく訴求するサイトを開発しました。',
+    tech: ['React', 'Next.js', 'TypeScript', 'Node.js', 'GraphQL', 'Tailwind CSS', 'Framer Motion', 'AWS', 'Vercel', 'Figma'],
+    features: [
+      'Interactive AI product showcase and use-case sections',
+      'Enterprise solution pages with modular content blocks',
+      'Dynamic animations explaining AI workflows',
+      'Lead generation forms integrated with CRM',
+      'Scalable component-based UI architecture',
+      'SEO and performance optimization for global traffic',
+    ],
+    featuresJp: [
+      'AIプロダクト紹介とユースケース表示',
+      'モジュール化されたエンタープライズ向けコンテンツ',
+      'AIワークフローを説明するアニメーション',
+      'CRM連携リード獲得フォーム',
+      'コンポーネントベースUI設計',
+      'グローバル対応SEOとパフォーマンス最適化',
+    ],
+    results: [
+      'Increase in enterprise lead generation',
+      'Improved engagement on product pages',
+      'Higher conversion rates from landing sections',
+      'Enhanced brand positioning as AI leader',
+    ],
+    resultsJp: [
+      'エンタープライズリード獲得増加',
+      'プロダクトページの滞在時間向上',
+      'LPからのコンバージョン率向上',
+      'AIリーダーとしてのブランド強化',
+    ],
+    challenge: 'The main challenge was explaining complex AI technologies in a clear and engaging way. Additionally, the site needed to support global enterprise users with scalable performance and modular design.',
+    challengeJp: '高度なAI技術を分かりやすく伝えることが課題でした。また、グローバル企業向けにスケーラブルな構成とパフォーマンスが求められました。',
+    solution: 'Used modular UI components and animation-driven storytelling to simplify complex concepts. Implemented a scalable frontend architecture with optimized performance.',
+    solutionJp: 'コンポーネント設計とアニメーションを活用し、複雑な概念を分かりやすく表現。スケーラブルなフロントエンド構成で高パフォーマンスを実現。',
+    architecture: 'Next.js + Node.js architecture with GraphQL API, deployed on Vercel and AWS for global scalability.',
+    architectureJp: 'Next.jsとNode.js、GraphQL API構成。VercelとAWSでグローバルスケールに対応。',
+    url: 'https://www.kore.ai/',
+  },
+  {
+    id: 'equals-soap-brand-site',
+    title: 'Equals Soap Brand Website',
+    titleJp: 'equals 洗顔石鹸 ブランドサイト',
+    category: 'LP',
+    period: '2024',
+    image: '/projects/equals-soap/fv.png',
+    subImages: [
+      '/projects/equals-soap/sub1.png',
+      '/projects/equals-soap/sub2.png',
+    ],
+    description: 'Brand-focused landing page for the skincare product “equals”, designed to communicate product philosophy, ingredients, and emotional value through visual storytelling.',
+    descriptionJp: 'スキンケアブランド「equals（イコールズ）」のブランドLP制作プロジェクト。製品の特徴や世界観をビジュアル中心で伝え、ユーザーの共感を促進する設計を実現しました。',
+    tech: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'GSAP', 'ScrollTrigger', 'WordPress', 'REST API', 'AWS', 'Figma'],
+    features: [
+      'Visual storytelling with scroll-based animations',
+      'Product feature sections highlighting ingredients and benefits',
+      'Brand philosophy and narrative-driven content',
+      'Mobile-first responsive design',
+      'CMS integration for content updates',
+      'Performance optimization for smooth animations',
+    ],
+    featuresJp: [
+      'スクロール連動のビジュアルストーリー演出',
+      '成分や特徴を伝える商品紹介セクション',
+      'ブランド哲学を表現するコンテンツ設計',
+      'モバイルファーストのレスポンシブ対応',
+      'CMSによるコンテンツ更新機能',
+      'スムーズなアニメーションのための最適化',
+    ],
+    results: [
+      'Improved brand engagement and storytelling impact',
+      'Higher product page interaction rates',
+      'Increased time spent on site',
+      'Enhanced emotional connection with users',
+    ],
+    resultsJp: [
+      'ブランド体験の向上',
+      '商品コンテンツの閲覧率向上',
+      '滞在時間の増加',
+      'ユーザーとの感情的なつながり強化',
+    ],
+    challenge: 'The project required balancing functional product information with emotional storytelling. Additionally, maintaining performance while using animation-heavy visuals was a key challenge.',
+    challengeJp: '機能的な商品説明と感情的なブランド表現を両立する必要がありました。また、アニメーションを多用しながらパフォーマンスを維持することも課題でした。',
+    solution: 'Designed a scroll-driven storytelling experience using lightweight animations. Optimized assets and rendering to maintain smooth performance across devices.',
+    solutionJp: '軽量なアニメーションを用いたスクロール型ストーリーデザインを採用。アセット最適化により快適な表示速度を実現しました。',
+    architecture: 'Static frontend with CMS integration and optimized asset delivery via CDN.',
+    architectureJp: '静的フロントエンドにCMSを統合し、CDNで高速配信する構成。',
+    url: 'https://equals-soap.jp/',
+  }
 ];

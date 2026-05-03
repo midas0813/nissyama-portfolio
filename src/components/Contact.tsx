@@ -28,7 +28,7 @@ export function Contact() {
         style={{
           backgroundImage: 'url(/map/jp.svg)',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'calc(50% - 300px) calc(50% + 100px)',
+          backgroundPosition: 'calc(50% - 200px) calc(50% + 50px)',
           backgroundSize: 'auto 100%',
           
           filter: 'grayscale(100%) brightness(0.5)',
