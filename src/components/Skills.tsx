@@ -1,96 +1,155 @@
+'use client';
+import { useLanguage } from '@/contexts/LanguageContext';
+
 export function Skills() {
+  const { t } = useLanguage();
+
   const skillCategories = [
     {
-      title: 'Frontend Development',
+      title: t('Frontend & Markup', 'フロントエンド・マークアップ'),
       icon: '🎨',
       skills: [
-        { name: 'React & Next.js', level: 'Expert', years: '5+' },
-        { name: 'TypeScript', level: 'Expert', years: '5+' },
-        { name: 'Tailwind CSS', level: 'Advanced', years: '3+' },
-        { name: 'HTML5 & CSS3', level: 'Expert', years: '5+' },
-        { name: 'State Management (Redux, Zustand)', level: 'Advanced', years: '4+' },
-      ]
+        { name: 'HTML5',        level: 95 },
+        { name: 'CSS3',         level: 92 },
+        { name: 'JavaScript',   level: 90 },
+        { name: 'TypeScript',   level: 85 },
+        { name: 'React',        level: 88 },
+        { name: 'Next.js',      level: 85 },
+        { name: 'Vue.js',       level: 82 },
+        { name: 'Vuetify',      level: 78 },
+        { name: 'Tailwind CSS', level: 90 },
+        { name: 'MUI',          level: 80 },
+      ],
     },
     {
-      title: 'Backend Development',
+      title: t('Animation & Motion', 'アニメーション・モーション'),
+      icon: '✨',
+      skills: [
+        { name: 'GSAP',           level: 85 },
+        { name: 'Framer Motion',  level: 82 },
+        { name: 'CSS Animations', level: 90 },
+        { name: 'ScrollTrigger',  level: 80 },
+        { name: 'Three.js',       level: 68 },
+        { name: 'Lottie',         level: 75 },
+      ],
+    },
+    {
+      title: t('CMS & No-Code', 'CMS・ノーコード'),
+      icon: '🧩',
+      skills: [
+        { name: 'WordPress', level: 92 },
+        { name: 'Shopify',   level: 85 },
+        { name: 'Webflow',   level: 83 },
+        { name: 'Swell',     level: 80 },
+        { name: 'Studio',    level: 78 },
+        { name: 'Wix',       level: 80 },
+      ],
+    },
+    {
+      title: t('Backend & Languages', 'バックエンド・言語'),
       icon: '⚙️',
       skills: [
-        { name: 'Node.js & Express', level: 'Expert', years: '5+' },
-        { name: 'Golang', level: 'Advanced', years: '3+' },
-        { name: 'RESTful API Design', level: 'Expert', years: '5+' },
-        { name: 'GraphQL', level: 'Advanced', years: '3+' },
-        { name: 'Microservices Architecture', level: 'Advanced', years: '3+' },
-      ]
+        { name: 'Node.js',  level: 85 },
+        { name: 'Python',   level: 82 },
+        { name: 'Go',       level: 75 },
+        { name: 'Ruby',     level: 72 },
+        { name: 'REST API', level: 88 },
+        { name: 'GraphQL',  level: 78 },
+      ],
     },
     {
-      title: 'Databases & Storage',
-      icon: '💾',
+      title: t('AI / LLM / RAG', 'AI・LLM・RAG'),
+      icon: '🤖',
       skills: [
-        { name: 'PostgreSQL', level: 'Expert', years: '5+' },
-        { name: 'MongoDB', level: 'Advanced', years: '4+' },
-        { name: 'Redis', level: 'Advanced', years: '4+' },
-        { name: 'Prisma ORM', level: 'Advanced', years: '3+' },
-      ]
+        { name: 'OpenAI API',                          level: 88 },
+        { name: 'LangChain',                           level: 82 },
+        { name: 'LlamaIndex',                          level: 78 },
+        { name: 'RAG',                                 level: 80 },
+        { name: 'Vector DB',                           level: 75 },
+        { name: t('Applied AI', 'AI応用開発'),          level: 80 },
+        { name: t('Web Scraping', 'Webスクレイピング'), level: 82 },
+        { name: 'Prompt Engineering',                  level: 85 },
+      ],
     },
     {
-      title: 'Cloud & DevOps',
+      title: t('Cloud & Infrastructure', 'クラウド・インフラ'),
       icon: '☁️',
       skills: [
-        { name: 'AWS (EC2, S3, Lambda)', level: 'Advanced', years: '4+' },
-        { name: 'Docker & Kubernetes', level: 'Advanced', years: '4+' },
-        { name: 'CI/CD (GitHub Actions)', level: 'Advanced', years: '4+' },
-        { name: 'Vercel & Netlify', level: 'Expert', years: '4+' },
-      ]
+        { name: 'AWS',        level: 80 },
+        { name: 'GCP',        level: 75 },
+        { name: 'Docker',     level: 78 },
+        { name: 'Vercel',     level: 88 },
+        { name: 'Supabase',   level: 78 },
+        { name: 'PostgreSQL', level: 82 },
+        { name: 'MongoDB',    level: 78 },
+        { name: 'Redis',      level: 72 },
+      ],
     },
+    {
+      title: t('Design & Tools', 'デザイン・ツール'),
+      icon: '✏️',
+      skills: [
+        { name: 'Figma',                             level: 88 },
+        { name: 'Adobe XD',                          level: 82 },
+        { name: t('LP Design', 'LPデザイン'),         level: 90 },
+        { name: t('HP Design', 'HPデザイン'),         level: 88 },
+        { name: t('UI/UX Design', 'UI/UXデザイン'),  level: 82 },
+        { name: 'Git / GitHub',                      level: 90 },
+      ],
+    },
+  ];
+
+  const allTags = [
+    'HTML', 'CSS', 'JavaScript', 'TypeScript',
+    'React', 'Next.js', 'Vue.js', 'Vuetify', 'Tailwind CSS', 'MUI',
+    'GSAP', 'Framer Motion', 'CSS Animations', 'ScrollTrigger', 'Three.js', 'Lottie',
+    'WordPress', 'Shopify', 'Webflow', 'Swell', 'Studio', 'Wix',
+    'Node.js', 'Python', 'Go', 'Ruby', 'REST API', 'GraphQL',
+    'OpenAI API', 'LangChain', 'LlamaIndex', 'RAG', 'Vector DB',
+    t('Applied AI', 'AI応用開発'), t('Web Scraping', 'Webスクレイピング'), 'Prompt Engineering',
+    'AWS', 'GCP', 'Docker', 'Vercel', 'Supabase', 'PostgreSQL', 'MongoDB', 'Redis',
+    'Figma', 'Adobe XD', t('LP Design', 'LPデザイン'), t('HP Design', 'HPデザイン'),
+    t('UI/UX Design', 'UI/UXデザイン'), 'Git / GitHub',
   ];
 
   return (
     <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 animate-fade-in-up">
-          <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-            Technical Skills
-          </span>
+        <h2 className="text-3xl font-bold text-primary mb-4 animate-fade-in-up">
+          {t('Technical Skills', '技術スキル')}
         </h2>
-        <p className="text-slate-600 dark:text-slate-400 mb-12 animate-fade-in-up animation-delay-100">
-          Full stack expertise across modern web technologies
+        <p className="text-muted mb-12 animate-fade-in-up">
+          {t(
+            'Full stack expertise — from design and CMS to AI/LLM engineering',
+            'デザイン・CMS構築からAI/LLMエンジニアリングまで、フルスタックの専門知識'
+          )}
         </p>
-        
-        <div className="grid md:grid-cols-2 gap-8">
+
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
           {skillCategories.map((category, idx) => (
-            <div 
-              key={category.title} 
-              className="border border-slate-200 dark:border-slate-800 rounded-lg p-6 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in-up card-3d"
-              style={{ animationDelay: `${idx * 100}ms` }}
+            <div
+              key={category.title}
+              className="card border rounded-xl p-6 card-3d animate-fade-in-up"
+              style={{ animationDelay: `${idx * 80}ms` }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <span className="text-3xl">{category.icon}</span>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
-                  {category.title}
-                </h3>
+                <span className="text-2xl">{category.icon}</span>
+                <h3 className="text-base font-semibold text-primary">{category.title}</h3>
               </div>
-              <div className="space-y-4">
+
+              <div className="space-y-3">
                 {category.skills.map((skill) => (
                   <div key={skill.name}>
-                    <div className="flex justify-between items-baseline mb-2">
-                      <span className="text-slate-700 dark:text-slate-300 font-medium text-sm">
-                        {skill.name}
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-sm font-medium text-primary">{skill.name}</span>
+                      <span className="text-xs text-green-600 dark:text-green-400 font-semibold tabular-nums">
+                        {skill.level}%
                       </span>
-                      <div className="flex items-center gap-3">
-                        <span className="text-xs text-slate-500 dark:text-slate-400">
-                          {skill.years}
-                        </span>
-                        <span className="text-xs px-2 py-1 bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900 dark:to-emerald-900 text-green-700 dark:text-green-300 rounded">
-                          {skill.level}
-                        </span>
-                      </div>
                     </div>
-                    <div className="h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-gradient-to-r from-green-600 to-emerald-600 rounded-full transition-all duration-1000 skill-bar"
-                        style={{ 
-                          width: skill.level === 'Expert' ? '100%' : skill.level === 'Advanced' ? '80%' : '60%' 
-                        }}
+                    <div className="h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-green-500 rounded-full transition-all duration-1000"
+                        style={{ width: `${skill.level}%` }}
                       />
                     </div>
                   </div>
@@ -98,6 +157,23 @@ export function Skills() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Full tag cloud */}
+        <div className="mt-14 animate-fade-in-up">
+          <h3 className="text-lg font-semibold text-primary mb-5">
+            {t('All Technologies', '全技術スタック')}
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {allTags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1.5 text-sm bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full border border-green-200 dark:border-green-800 hover:bg-green-200 dark:hover:bg-green-900/60 transition-colors cursor-default"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
