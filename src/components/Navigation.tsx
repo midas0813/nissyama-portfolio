@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
 
@@ -21,12 +22,15 @@ export function Navigation() {
     <nav className="nav-bar fixed top-0 left-0 right-0 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <a href="/" className="text-xl font-bold text-green-600 dark:text-green-400">
-<<<<<<< HEAD
-            NsN
-=======
-            N N
->>>>>>> d8f0a0cae668907b2c3e817e1504123e23a33380
+          <a href="/" className="flex items-center">
+            <Image
+              src="/logo-search-grid-2x.png"
+              alt="Nishiyama Naoki"
+              width={120}
+              height={40}
+              className="h-9 w-auto object-contain"
+              priority
+            />
           </a>
 
           {/* Desktop Navigation */}
