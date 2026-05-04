@@ -23,14 +23,7 @@ export function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <a href="/" className="flex items-center">
-            <Image
-              src="/logo-search-grid-2x.png"
-              alt="Nishiyama Naoki"
-              width={120}
-              height={40}
-              className="h-9 w-auto object-contain"
-              priority
-            />
+            西山 直輝
           </a>
 
           {/* Desktop Navigation */}
@@ -44,7 +37,7 @@ export function Navigation() {
                 {item.label}
               </a>
             ))}
-            
+
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
@@ -99,7 +92,7 @@ export function Navigation() {
                 {item.label}
               </a>
             ))}
-            
+
             <div className="flex items-center gap-3 pt-2">
               <button
                 onClick={toggleTheme}
