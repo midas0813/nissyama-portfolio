@@ -103,7 +103,7 @@ export function Hero() {
           <div className="absolute inset-0 rounded-full border-2 border-green-500/30 scale-125 animate-pulse-ring" />
           <div className="absolute inset-0 rounded-full border border-green-400/20 scale-150 animate-pulse-ring" style={{ animationDelay: '1s' }} />
           <div className="w-32 h-32 mx-auto rounded-full bg-green-600 flex items-center justify-center text-white text-4xl font-bold shadow-2xl shadow-green-500/30 relative z-10">
-            NT
+            NISSYAMA
           </div>
         </div>
 
